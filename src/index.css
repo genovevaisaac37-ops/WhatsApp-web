@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* WhatsApp thin custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(134, 150, 160, 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(134, 150, 160, 0.45);
+  }
+}
+
+/* Subtle WhatsApp doodle background SVG pattern */
+.whatsapp-chat-bg-dark {
+  background-color: #0b141a;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+.whatsapp-chat-bg-light {
+  background-color: #efeae2;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                    radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Voice recording pulse animation */
+@keyframes pulse-record {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-record {
+  animation: pulse-record 1.2s infinite ease-in-out;
+}
+
+/* 🌈 Neon Cyan & Orange Rainbow Wallpaper */
+@keyframes neon-rainbow-aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes neon-rainbow-flash {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+    filter: brightness(1);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1.6) drop-shadow(0 0 35px rgba(0, 240, 255, 0.75)) drop-shadow(0 0 45px rgba(255, 109, 0, 0.75));
+  }
+  40% {
+    opacity: 0.95;
+    filter: brightness(1.4) drop-shadow(0 0 25px rgba(0, 240, 255, 0.6)) drop-shadow(0 0 35px rgba(255, 109, 0, 0.6));
+  }
+  75% {
+    opacity: 0.9;
+    filter: brightness(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.01);
+    filter: brightness(1);
+  }
+}
+
+@keyframes neon-banner-slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.92);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.96);
+  }
+}
+
+.whatsapp-chat-bg-neon-rainbow {
+  background-color: #061118;
+  background-image: 
+    radial-gradient(ellipse at 15% 25%, rgba(0, 240, 255, 0.32) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 75%, rgba(255, 109, 0, 0.38) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 10%, rgba(255, 0, 128, 0.22) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 30%, rgba(0, 229, 255, 0.25) 0%, transparent 45%),
+    radial-gradient(ellipse at 30% 85%, rgba(255, 165, 0, 0.28) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(0, 240, 255, 0.12), rgba(138, 43, 226, 0.1), rgba(255, 109, 0, 0.15)),
+    radial-gradient(rgba(0, 240, 255, 0.08) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(255, 109, 0, 0.08) 1.5px, transparent 1.5px);
+  background-size: 150% 150%, 150% 150%, 140% 140%, 140% 140%, 140% 140%, 200% 200%, 32px 32px, 32px 32px;
+  background-position: 0 0, 100% 100%, 50% 0, 80% 20%, 20% 80%, 0% 50%, 0 0, 16px 16px;
+  animation: neon-rainbow-aurora 18s ease-in-out infinite;
+}
+
+.neon-flash-sweep {
+  animation: neon-rainbow-flash 4.5s ease-in-out forwards;
+}
+
+.animate-neon-banner {
+  animation: neon-banner-slide 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

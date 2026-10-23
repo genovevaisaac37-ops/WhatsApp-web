@@ -1,0 +1,10 @@
+{
+  "name": "WhatsApp Web",
+  "description": "Fast, simple, secure messaging and calling with WhatsApp Web. Send messages, voice notes, media, and stay connected with status stories and encrypted chats.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
